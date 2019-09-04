@@ -1,0 +1,67 @@
+# compiled output
+**/.dist/desktop
+**/.dist/mobile
+**/dist
+**/.temp
+**/tmp
+**/out-tsc
+
+# dependencies
+**/node_modules
+
+# IDEs and editors
+**/.idea
+**/.project
+**/.classpath
+**/.c9/
+**/*.launch
+**/.settings/
+**/*.sublime-workspace
+
+# IDE - VSCode
+**/.vscode/*
+**/!.vscode/settings.json
+**/!.vscode/tasks.json
+**/!.vscode/launch.json
+**/!.vscode/extensions.json
+
+# misc
+**/.sass-cache
+**/connect.lock
+**/coverage
+**/libpeerconnection.log
+**/npm-debug.log
+**/testem.log
+**/typings
+**/.editorconfig
+**/.gitkeep
+**/package-lock.json
+
+# e2e
+**/e2e/*.js
+**/e2e/*.map
+
+# System Files
+**/.DS_Store
+**/Thumbs.db
+
+# Other files
+**/.dist
+**/src/app/**/*.js
+**/src/app/**/*.js.map
+
+# Server files
+**/.vs
+**/bin
+**/wwwroot
+**/appsettings.production.json
+**/Properties/PublishProfiles/
+
+**/obj/
+**/Properties/
+**/bin/
+FarmManagerServer/*.log
+
+# Other files
+*.DotSettings.user
+*.idea

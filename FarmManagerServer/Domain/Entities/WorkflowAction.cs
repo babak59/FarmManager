@@ -1,9 +1,9 @@
-﻿
+﻿using Domain.Abstract;
 using System.Collections.Generic;
 
 namespace Domain.Entities
 {
-    public class WorkflowAction
+    public class WorkflowAction : IBaseEntity
     {
         #region Constructors
 
@@ -16,7 +16,7 @@ namespace Domain.Entities
         #endregion
         #region Properties
 
-        public int Id { get; set; }
+        public long Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
 

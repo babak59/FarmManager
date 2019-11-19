@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using Domain.Abstract;
+using System.Collections.Generic;
 
 namespace Domain.Entities
 {
-    public class Farm
+    public class Farm : IBaseEntity
     {
         #region Constructors
 

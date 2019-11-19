@@ -1,8 +1,9 @@
-﻿using System;
+﻿using Domain.Abstract;
+using System;
 
 namespace Domain.Entities
 {
-    public class WorkflowTask
+    public class WorkflowTask : IBaseEntity
     {
         #region Constructors
 
@@ -21,8 +22,8 @@ namespace Domain.Entities
         public string WorkflowActionName { get; set; }
         public string Symbol { get; set; }
         public long FarmTaskId { get; set; }
-        public int WorkflowStatusId { get; set; }
-        public int WorkflowActionId { get; set; }
+        public long WorkflowStatusId { get; set; }
+        public long WorkflowActionId { get; set; }
 
         public FarmTask FarmTask { get; set; }
         public WorkflowStatus WorkflowStatus { get; set; }

@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using Domain.Abstract;
+using System.Collections.Generic;
 
 namespace Domain.Entities
 {
-    public class Employee
+    public class Employee : IBaseEntity
     {
         #region Constructors
 

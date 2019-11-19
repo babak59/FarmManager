@@ -7,7 +7,7 @@ using System.Linq.Expressions;
 
 namespace Domain.Repositories
 {
-    public class RepositoryBase<T> : IRepositoryBase<T> where T : class
+    public class RepositoryBase<T> : IRepositoryBase<T> where T : class, IBaseEntity
     {
         #region Properties
 

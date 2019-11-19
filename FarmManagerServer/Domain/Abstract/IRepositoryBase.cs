@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 
 namespace Domain.Abstract
 {
-    public interface IRepositoryBase<T> where T : class
+    public interface IRepositoryBase<T> where T : class, IBaseEntity
     {
         #region Members
 

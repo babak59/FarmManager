@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using Domain.Abstract;
+using System.Collections.Generic;
 
 namespace Domain.Entities
 {
-    public class Resource
+    public class Resource : IBaseEntity
     {
         #region Properties
 
@@ -14,7 +15,7 @@ namespace Domain.Entities
         #endregion
         #region Properties
 
-        public int Id { get; set; }
+        public long Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public string TypeOfResource { get; set; }

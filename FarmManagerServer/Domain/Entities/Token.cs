@@ -1,8 +1,9 @@
-﻿using System;
+﻿using Domain.Abstract;
+using System;
 
 namespace Domain.Entities
 {
-    public class Token
+    public class Token : IBaseEntity
     {
         #region Properties
 

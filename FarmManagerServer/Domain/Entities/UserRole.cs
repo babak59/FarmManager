@@ -1,7 +1,8 @@
-﻿
+﻿using Domain.Abstract;
+
 namespace Domain.Entities
 {
-    public class UserRole
+    public class UserRole : IBaseEntity
     {
         #region Properties
 

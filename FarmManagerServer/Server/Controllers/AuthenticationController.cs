@@ -40,7 +40,7 @@ namespace Server.Controllers
             }
 
 
-            return BadRequest("User doesn't exist or invalid Grant!");
+            return BadRequest("User does not exist.");
         }
     }
 }

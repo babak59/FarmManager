@@ -7,7 +7,23 @@ namespace Domain.DAL
     {
         #region Properties
 
-
+        public virtual DbSet<Company> Companies { get; set; }
+        public virtual DbSet<Employee> Employees { get; set; }
+        public virtual DbSet<Farm> Farms { get; set; }
+        public virtual DbSet<Field> Fields { get; set; }
+        public virtual DbSet<Machine> Machines { get; set; }
+        public virtual DbSet<Resource> Resources { get; set; }
+        public virtual DbSet<Role> Roles { get; set; }
+        public virtual DbSet<TaskEquipment> TaskEquipments { get; set; }
+        public virtual DbSet<FarmTask> FarmTasks { get; set; }
+        public virtual DbSet<Token> Tokens { get; set; }
+        public virtual DbSet<UserRole> UserRoles { get; set; }
+        public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<WorkflowTask> WorkflowTasks { get; set; }
+        public virtual DbSet<WorkflowStatusAction> WorkflowStatusActions { get; set; }
+        public virtual DbSet<WorkflowAction> WorkflowActions { get; set; }
+        public virtual DbSet<WorkflowStatus> WorkflowStatuses { get; set; }
+        public virtual DbSet<RefreshToken> RefreshTokens { get; set; }
 
         #endregion
         #region Constructors
@@ -545,6 +561,30 @@ namespace Domain.DAL
                     .HasColumnType("varchar(50)");
 
                 entity.Property(e => e.Description).HasColumnType("varchar(500)");
+            });
+
+            modelBuilder.Entity<RefreshToken>(entity =>
+            {
+                entity.ToTable("RefreshTokens");
+                entity.HasKey(e => e.Id);
+
+                entity.HasIndex(e => e.Token)
+                    .HasName("IDXRefreshTokenToken");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("bigint(19)");
+
+                entity.Property(e => e.ValidTime)
+                    .IsRequired()
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.Username)
+                    .IsRequired()
+                    .HasColumnType("varchar(70)");
+
+                entity.Property(e => e.Token)
+                    .IsRequired()
+                    .HasColumnType("varchar(32)");
             });
         }
 

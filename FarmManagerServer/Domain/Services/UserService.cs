@@ -23,7 +23,7 @@ namespace Domain.Services
         #endregion
         #region Constructors
 
-        public UserService(IEmailService emailService, IMapper mapper, IRepositoryBase<User> mainRepository) : base(mainRepository)
+        public UserService(IEmailService emailService, IMapper mapper, IBaseRepository<User> mainRepository) : base(mainRepository)
         {
             _emailService = emailService;
             _mapper = mapper;

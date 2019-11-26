@@ -19,8 +19,8 @@ namespace Domain.Helpers
 
         public static IServiceCollection InjectRepositories(this IServiceCollection services)
         {
-            services.AddScoped<IRepositoryBase<User>, RepositoryBase<User>>();
-            services.AddScoped<IRepositoryBase<RefreshToken>, RepositoryBase<RefreshToken>>();
+            services.AddScoped<IBaseRepository<User>, RepositoryBase<User>>();
+            services.AddScoped<IBaseRepository<RefreshToken>, RepositoryBase<RefreshToken>>();
             return services;
         }
     }

@@ -18,7 +18,7 @@ namespace Server.Services
         #endregion
         #region Constructors
 
-        public RefreshTokenService(IOptions<JwtSettings> jwtSettings, IRepositoryBase<RefreshToken> mainRepository) : base(mainRepository)
+        public RefreshTokenService(IOptions<JwtSettings> jwtSettings, IBaseRepository<RefreshToken> mainRepository) : base(mainRepository)
         {
             _jwtSettings = jwtSettings.Value;
         }

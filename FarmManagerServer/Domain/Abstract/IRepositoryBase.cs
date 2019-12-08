@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
 
 namespace Domain.Abstract
 {
-    public interface IRepositoryBase<T> where T : class, IBaseEntity
+    public interface IBaseRepository<T> where T : class, IBaseEntity
     {
         #region Members
 

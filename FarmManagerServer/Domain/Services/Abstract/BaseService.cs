@@ -7,12 +7,12 @@ namespace Domain.Services
     {
         #region Properties
 
-        protected IRepositoryBase<T> MainRepository { get; private set; }
+        protected IBaseRepository<T> MainRepository { get; private set; }
 
         #endregion
         #region Constructors
 
-        public BaseService(IRepositoryBase<T> mainRepository)
+        public BaseService(IBaseRepository<T> mainRepository)
         {
             MainRepository = mainRepository;
         }

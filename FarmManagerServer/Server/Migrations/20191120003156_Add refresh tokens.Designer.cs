@@ -3,14 +3,16 @@ using System;
 using Domain.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Server.Migrations
 {
     [DbContext(typeof(FarmManagerDbContext))]
-    partial class FarmManagerDbContextModelSnapshot : ModelSnapshot
+    [Migration("20191120003156_Add refresh tokens")]
+    partial class Addrefreshtokens
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
